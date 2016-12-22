@@ -5,7 +5,6 @@
  * => lifecycle
  *    요청 --> HttpServletRequest 객체와 HttpServletResponse 객체가 생성된다. --> 응답 후 삭제
  *    즉, 요청이 처리되는 동안만 유지된다.
- *    
  */
 package bitcamp.servlet6;
 
@@ -36,7 +35,6 @@ public class Servlet31_1 extends HttpServlet {
     RequestDispatcher rd = request.getRequestDispatcher("/servlet/servlet31_2");
     rd.forward(request, response);
   }
-  
 }
 
 

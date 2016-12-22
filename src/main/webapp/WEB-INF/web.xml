@@ -6,6 +6,27 @@
   version="3.1"
   metadata-complete="false">
 
+
+
+
+
+<!-- 리스너 등록 -->
+<!--   <listener>
+    <listener-class>bitcamp.servlet7.Listener1</listener-class>
+  </listener> -->
+
+<!-- 필터 클래스 등록 
+  <filter>
+    <filter-name>Filter1</filter-name>
+    <filter-class>bitcamp.servlet7.Filter1</filter-class>
+  </filter>
+  -->
+<!-- 필터를 적용할 URL 지정 
+  <filter-mapping>
+    <filter-name>Filter1</filter-name>
+    <url-pattern>/servlet/servlet34</url-pattern>
+  </filter-mapping>
+-->
 <!-- 서블릿 클래스 등록 -->
   <servlet>
     <servlet-name>servlet 04</servlet-name>
@@ -25,6 +46,8 @@
     <servlet-name>servlet 05</servlet-name>
     <url-pattern>/servlet05</url-pattern>
   </servlet-mapping>
+  
+  
 </web-app>
 
 
