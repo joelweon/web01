@@ -16,6 +16,13 @@ public class Student implements Serializable {
 
   public Student() {}
 
+  public Student(String name, String email, String tel, boolean working) {
+    this.name = name;
+    this.email = email;
+    this.tel = tel;
+    this.working = working;
+  }
+  
   public Student(String userId, String password, String name, String tel) {
     this.userId = userId;
     this.password = password;
