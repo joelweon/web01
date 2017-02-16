@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Property Basic</title>
+    <style>
+        h1 {border: 5px solid red;}
+        .box { 
+            width: 200px; height: 100px; 
+            /* absolute
+            - 위치의 기준이 되는 부보가 absolute나 relative가 아니면 
+            - 
+             */
+            position:absolute;
+        }
+        /* 
+        float: left / right 중 하나. 
+        position: absolute / relative / fixed
+         */
+        .red { background-color: red; left:0px; top:0px; z-index:3;}
+        .green { background-color: green; left:20px; top:20px; z-index:2;}
+        .blue { background-color: blue; left:40px; top:40px; z-index:1;}
+    </style>
+</head>
+<body>
+    <h1>하하하</h1>
+    <div style='position:absolute; left:100px; top:200px;width:400px; height:400px; background-color:gray;'>
+      <div class="box red">a</div><!-- 블럭타입은 아래로 떨어진다. -->
+      <div class="box green">b</div>
+      <div class="box blue"></div>
+    </div>
+    <h1>호호호</h1>
+</body>
+</html>

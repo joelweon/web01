@@ -5,15 +5,14 @@
 <title>javascript</title>
 </head>
 <body>
-<h1>자바스크립트 내장(built-in) 객체 - 배열II</h1>
+<h1>자바스크립트 내장(built-in) 객체 - 배열 II</h1>
 <pre>
 - 자바스크립트에서 배열을 다룰 때 Array 객체를 사용할 수 있다.
-
 </pre>
 <script>
 "use strict"
 
-// 배열 만들기(대괄호 방법을 가장 많이 쓴다.)
+// 배열 만들기
 var names = [];
 console.log(names.length);
 
@@ -26,15 +25,11 @@ console.log(names.length);
 printArray(names);
 
 function printArray(arr) {
-  for (var i in arr) { //인덱스 뽑기 in
-  	console.log(i, arr[i]);
-  }
-  console.log("---------------------------");
-	
+	for (var i in arr) {
+		console.log(i, arr[i]);
+	}
+	console.log("-------------------");
 }
-
-
-
 </script>
 
 </body>

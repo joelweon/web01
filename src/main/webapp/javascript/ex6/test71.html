@@ -5,12 +5,11 @@
 <title>javascript</title>
 <style>
 div {
-  border: 1px solid green;
+  border: 1px solid red;
   padding: 10px;
   margin: 10px;
 }
 </style>
-
 </head>
 <body>
 <h1>이벤트 처리 - 기본 행동 취소하기 II</h1>
@@ -20,11 +19,11 @@ div {
   event.preventDefault()를 호출하라.
 </pre>
 
-<h2>form의 submit 버튼의 기본행동 취소하기</h2>
+<h2>form의 submit 버튼의 기본 행동 취소하기</h2>
 <form action="http://www.daum.net" method="get">
 이메일*: <input id="email" type="text"><br>
 암호*: <input id="password" type="password"><br>
-tel : <input id="tel" type="text"><br>
+tel: <input id="tel" type="text"><br>
 <button id="addBtn">등록</button>
 <button id="addBtn2" onclick="return form_submit(event)">등록2</button>
 </form>
@@ -32,36 +31,30 @@ tel : <input id="tel" type="text"><br>
 <script>
 "use strict"
 
-
-document.getElementById('addBtn').addEventListener("click", function(event) {
-	var email = document.getElementById('email').value;
-	var password = document.getElementById('password').value;
-	
-	if (email == "" || password =="") {
-		alert("이메일과 암호는 필수 입력 사항입니다.")
-		event.preventDefault();
-	}
+document.getElementById('addBtn').addEventListener("click", function(event) { 
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  
+  if (email == "" || password == "") {
+	  alert("이메일과 암호는 필수 입력 항목입니다.");
+	  event.preventDefault();
+  }
 });
 
-function form_submit(event) {
-	  var email = document.getElementById('email').value;
-	  var password = document.getElementById('password').value;
-	  
-	  if (email == "" || password =="") {
-	    alert("이메일과 암호는 필수 입력 사항입니다.")
-	    return false;
-	  }
+function form_submit(event) { 
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  
+  if (email == "" || password == "") {
+    alert("이메일과 암호는 필수 입력 항목입니다.");
+    return false;
+  }
 }
 
 </script>
 
-
 </body>
 </html>
-
-
-
-
 
 
 

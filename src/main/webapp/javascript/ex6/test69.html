@@ -5,19 +5,17 @@
 <title>javascript</title>
 <style>
 div {
-  border: 1px solid green;
+  border: 1px solid red;
   padding: 10px;
   margin: 10px;
 }
 </style>
-
 </head>
 <body>
 <h1>이벤트 처리 - 버블링 취소하기 II</h1>
 <pre>
 - stopPropagation()은 타겟 단계 이후에 수행하는 버블 단계를 취소한다.
 - stopImmediatePropatation()은 같은 타겟 단계에 등록된 함수의 호출도 취소한다.
-
 </pre>
 
 <div id="d1">d1
@@ -33,64 +31,63 @@ div {
 
 <script>
 "use strict"
-// 얘네는 다 타겟단계에 있는 것 . 다 등록
+
 document.getElementById('btn1').addEventListener("click", function(event) {
-	console.log("btn1-->1111");
-	event.stopPropagation()
-});
-document.getElementById('btn1').addEventListener("click", function(event) {
-	console.log("btn1-->2222");
-});
-document.getElementById('btn1').addEventListener("click", function(event) {
-	console.log("btn1-->3333");
+	console.log('btn1-->1111');
+	event.stopPropagation();
 });
 
-// 즉시 실행을 멈춘다.(타겟 단계도)
+document.getElementById('btn1').addEventListener("click", function(event) {
+  console.log('btn1-->2222');
+});
+	
+document.getElementById('btn1').addEventListener("click", function(event) {
+  console.log('btn1-->3333');
+});
+
 document.getElementById('btn2').addEventListener("click", function(event) {
-  console.log("btn2-->1111");
-//현재 메서드 호출 완료 후 즉시 전파를 멈춘다.
+  console.log('btn2-->1111');
+  // 현재 메서드 호출 완료 후 즉시 전파를 멈춘다.
   event.stopImmediatePropagation();
 });
+
 document.getElementById('btn2').addEventListener("click", function(event) {
-  console.log("btn2-->2222");
+  console.log('btn2-->2222');
 });
+  
 document.getElementById('btn2').addEventListener("click", function(event) {
-  console.log("btn2-->3333");
+  console.log('btn2-->3333');
 });
 
 document.getElementById('d1').onclick = function(event) {
-	console.log("d1");
+  console.log('d1');
 };
-
+	
 document.getElementById('d2').onclick = function(event) {
-	console.log("d2");
-};
-document.getElementById('d3').onclick = function(event) {
-	console.log("d3");
+  console.log('d2');
 };
 
-document.getElementById('d4').onclick =  function(event) { // onclick은 버블단계.
+document.getElementById('d3').onclick = function(event) {
+  console.log('d3');
+};
+
+document.getElementById('d4').onclick = function(event) {
 	console.log('d4');
 };
 
 document.getElementById('d5').onclick = function(event) {
-	  console.log('d5');
+  console.log('d5');
 };
 
 document.body.onclick = function(event) {
-	console.log('body');
+  console.log('body');
 };
 
 
 </script>
 
-
 </body>
 </html>
-
-
-
-
 
 
 

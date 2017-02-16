@@ -16,7 +16,7 @@
 
 function createStudent(name, age, kor, eng, math) {
 	return {
-		"name": name, // 왼쪽은 프로퍼티명(즉 키) 오른쪽은 파라미터변수
+		"name": name,
 	  "age": age,
 	  "kor": kor,
 	  "eng": eng,
@@ -27,7 +27,7 @@ function createStudent(name, age, kor, eng, math) {
 	  "aver": function() {
 	    return this.sum() / 3;
 	  }
-	};//자바스크립트 객체를 생성해서 값을 리턴해라
+	};
 }
 
 var s1 = createStudent("홍길동", 20, 100, 100, 100);

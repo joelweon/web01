@@ -7,15 +7,16 @@
 <body>
 <h1>웹브라우저 내장(built-in) 객체 - window.screen</h1>
 <pre>
-- window : 각각의 탭마다 제공된다. 해당 탭에 윈도우 정보를 다룰 때 사용하는 객체이다.
+- window 
+  각각의 탭마다 제공된다. 해당 탭의 윈도우 정보를 다룰 때 사용하는 객체이다.
 - window.location
-  현재 탭에서 출려하는 페이지의 URL 정보를 다룰 때 사용하는 객체이다.
+  현재 탭에서 출력하는 페이지의 URL 정보를 다룰 때 사용하는 객체이다.
 - window.history
-  사용자가 페이지 이동한 정보를 다룰 때 사용하는 객체이다.
+  사용자가 페이지 이동한 정보를 다룰 때 사용하는 객체이다.     
 - window.navigator
-  웹 브라우저 정보를 다룰 때 사용하는 객체이다.(현재 사용자가 어떤 브라우저를 쓰는지 등)
+  웹 브라우저 정보를 다룰 때 사용하는 객체이다.
 - window.screen
-  페이지를 출력하는 화면정보를 다룰 때 사용하는 정보이다.
+  페이지를 출력하는 화면 정보를 다룰 때 사용하는 객체이다.
 
 </pre>
 
@@ -23,12 +24,13 @@
 "use strict"
 
 console.log(window.screen);
-console.log("스크린해상도= ",screen.width, "x", screen.height);
-console.log("스크린에서 이용할 수 있는 영역= ", window.screen.availWidth, "x", screen.availHeight);
+console.log("스크린 해상도: ", screen.width, screen.height);
+console.log("스크린에서 이용할 수 있는 영역: ", screen.availWidth, screen.availHeight);
 
 console.log(window);
-console.log("실제 브라우저 크기: ", window.outerWidth, "x", window.outerHeight);
-console.log("브라우저 안쪽에 있는 내용을 출력하는 창의 크기(클라이언트 크기): ", window.innerWidth, "x", window.innerHeight);
+console.log("브라우저 크기: ", window.outerWidth, window.outerHeight);
+console.log("브라우저 안쪽에 있는 내용을 출력하는 창의 크기: ", 
+		window.innerWidth, window.innerHeight);
 </script>
 
 </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Property Basic</title>
+    <style>
+        h1 {border: 5px solid red;}
+        .box { 
+            width: 200px; height: 100px; 
+            /* float
+            - 현재 위치에서 태그를 띄운다.
+            - left 또는 right로 정렬. (center 없다!!)
+            - 위 아래로 이동불가!!!
+            - 다음 태그가 자동으로 현재 위치로 올라온다.
+             */
+            float:right;
+        }
+        /* 
+        float: left / right 중 하나. 
+        position: absolute / relative / fixed
+         */
+        .red { background-color: red; }
+        .green { background-color: green; }
+        .blue { background-color: blue; }
+    </style>
+</head>
+<body>
+    <h1>하하하</h1>
+    <div class="box red">a</div><!-- 블럭타입은 아래로 떨어진다. -->
+    <div class="box green">b</div>
+    <div class="box blue"></div>
+    <h1>호호호</h1>
+</body>
+</html>
